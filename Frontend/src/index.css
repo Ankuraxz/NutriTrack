@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html{
+    height: 100vh;
+    overflow: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* For mobile navbar hamburger icon */
+  #menu-icon {
+    display: inline-block;
+    padding: 10px;
+  }
+  #menu-icon .bar {
+    margin: 3px;
+    width: 25px;
+    height: 3px;
+    border-radius: 1px;
+    transition: margin 0.3s, transform 0.3s;
+  
+    /* same as above but with prefixes added */
+    -webkit-transition: margin 0.3s, -webkit-transform 0.3s;
+    transition: margin 0.3s, -webkit-transform 0.3s;
+    -o-transition: margin 0.3s, transform 0.3s;
+    transition: margin 0.3s, transform 0.3s;
+    transition: margin 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  }
+  #menu-icon:not(.close):hover {
+    padding: 6px 10px;
+  }
+  #menu-icon:not(.close):hover .bar {
+    margin: 5px 3px;
+  }
+  #menu-icon.close .bar:first-child {
+    -webkit-transform: translateY(6px) rotate(45deg);
+        -ms-transform: translateY(6px) rotate(45deg);
+            transform: translateY(6px) rotate(45deg);
+  }
+  #menu-icon.close .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-icon.close .bar:last-child {
+    -webkit-transform: translateY(-6px) rotate(-45deg);
+        -ms-transform: translateY(-6px) rotate(-45deg);
+            transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Invisible scrollbar for chat section */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.invisible-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
